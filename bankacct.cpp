@@ -72,7 +72,7 @@ int main() {
 	if(dbName == nullptr) return 1;
 
 	//Sort by Account number
-	sort(people.begin(), people.end(), [](Account& a, Account& b) {
+	sort(people.begin(), people.end(), [](const Account& a, const Account& b) {
 		return strcmp(a.number, b.number) < 0;
 	});
 
@@ -1170,7 +1170,7 @@ void openAccount(vector<Account>* people) {
 						if(strlen(buf) != 6) break;
 						strcpy(newPerson.password, buf);
 						people->push_back(newPerson);
-						sort(people->begin(), people->end(), [](Account& a, Account& b) {
+						sort(people->begin(), people->end(), [](const Account& a, const Account& b) {
 							return strcmp(a.number, b.number) < 0;
 						});
 						return;
