@@ -1,5 +1,5 @@
 # bankacct
-My first [roject for CS 202 at TMCC.
+My first project for CS 202 at TMCC.
 
 A simple GUI-based program for managing bank accounts.
 
